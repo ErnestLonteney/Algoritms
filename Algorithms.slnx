@@ -1,5 +1,6 @@
 <Solution>
   <Project Path="Arrays/Arrays.csproj" Id="05a270d6-5730-47d2-be4f-24861e8b02b5" />
   <Project Path="BackWord/BackWord.csproj" />
+  <Project Path="BinarySearch/BinarySearch.csproj" Id="824f80eb-1142-4800-9b99-36e68c868876" />
   <Project Path="QuickSort/QuickSort.csproj" Id="a65d8324-fb43-40e9-8d47-e3d5431b0205" />
 </Solution>

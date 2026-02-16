@@ -32,7 +32,7 @@
             return min;
         }
 
-        static int CalculateAverage(int[] arr) // O(n + 1)
+        static int CalculateAverage(int[] arr) // O(n)
         {
             int sum = SumOfNumbers(arr);
 
@@ -108,6 +108,23 @@
             }
         }
 
+        // Bubble sort algorithm
+        static void SortArray3(int[] arr) // O(n^2)
+        {
+            for (int i = 0; i < arr.Length - 1; i++)
+            {
+                for (int j = 0; j < arr.Length - 1; j++)
+                {
+                    if (arr[j] > arr[j + 1])
+                    {
+                        var buf = arr[j];
+                        arr[j] = arr[j + 1];
+                        arr[j + 1] = buf;
+                    }
+                }
+            }
+        }
+
         static void Main()
         {
             int[] numbers = [12, 45, 0, -56, 23, 17, 70]; 
@@ -117,7 +134,7 @@
             var sum = SumOfNumbers(numbers);
             var count = CountEvenNumber(numbers);
 
-            SortArray2(numbers);
+            SortArray3(numbers);
 
             //Console.WriteLine($"Min number is {minElement}");
             //Console.WriteLine($"Max number is {maxElement}");
