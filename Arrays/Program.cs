@@ -125,6 +125,20 @@
             }
         }
 
+        static int MoreLess(int[] arr, int number)
+        {
+            int greater = 0;
+
+            for(int i = 0;i < arr.Length;i++)
+            {
+                if (arr[i] > number)
+                {
+                    greater++;
+                }
+            }
+            return greater;
+        }
+
         static void Main()
         {
             int[] numbers = [12, 45, 0, -56, 23, 17, 70]; 
@@ -133,6 +147,7 @@
             var maxElement = FindMax(numbers);
             var sum = SumOfNumbers(numbers);
             var count = CountEvenNumber(numbers);
+            var greater = MoreLess(numbers,5);
 
             SortArray3(numbers);
 
