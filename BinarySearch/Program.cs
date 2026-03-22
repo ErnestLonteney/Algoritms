@@ -38,7 +38,7 @@
         {
             int[] numbers = [1, 10, 13, 77, 89, 100, 200, 300, 400, 500, 600, 1000]; 
 
-            var res = BinarySearch(numbers, 300);
+            var res = BinarySearch(numbers, 100);
 
             Console.WriteLine(res);
         }
