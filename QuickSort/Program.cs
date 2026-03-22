@@ -16,31 +16,6 @@
             return [..QuickSort(ar1), pivot, ..QuickSort(ar2)];
         }
 
-        static int[] QuickSortOptimized(int[] array, int leftIndex, int rightIndex)
-        {
-            if (array.Length < 2)
-                return array;
-
-            var pivotIndex = leftIndex;
-
-            while (pivotIndex < rightIndex)
-            {
-                if (array[pivotIndex] > array[rightIndex])
-                {
-                    var buf = array[pivotIndex];
-                    array[pivotIndex] = array[rightIndex];
-                    array[rightIndex] = buf;
-                    pivotIndex = rightIndex;
-                }
-                else
-                {
-                    rightIndex--;
-                }
-            }          
-
-            return [..QuickSortOptimized(ar1, leftIndex, rightIndex), array[pivotIndex], ..QuickSortOptimized(ar2, leftIndex, rightIndex)];
-        }
-
         static void Main()
         {
             int[] array = [ 5, 2, 9, 1, 5, 6 ];

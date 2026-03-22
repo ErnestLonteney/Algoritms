@@ -5,4 +5,5 @@
   <Project Path="Extension/Extension.csproj" Id="7fc88375-9b59-4f1f-9d75-4734375c449d" />
   <Project Path="QuickSort/QuickSort.csproj" Id="a65d8324-fb43-40e9-8d47-e3d5431b0205" />
   <Project Path="SortArraysTraining/SortArraysTraining.csproj" Id="5c915099-43c8-4970-80f1-d3cbcd4b1787" />
+  <Project Path="UpperText/UpperText.csproj" />
 </Solution>
