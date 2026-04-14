@@ -1,4 +1,6 @@
-﻿class Program
+﻿using SortArraysTraining;
+
+class Program
 {
     static int GetMinElementIndex(int[] arr, int startIndex)
     {
@@ -14,12 +16,12 @@
         return minIndex;
     }
 
-    static void SortArray2(int[] arr)
+    static void SelectionSort(int[] arr)
     {
         for (int i = 0; i < arr.Length - 1; i++)
         {
             int minElementIndex = GetMinElementIndex(arr, i);
-            if(i != minElementIndex)
+            if (i != minElementIndex)
             {
                 var buf = arr[i];
                 arr[i] = arr[minElementIndex];
@@ -28,9 +30,7 @@
         }
     }
 
-
-
-    static void SortArray3(int[] arr)
+    static void BubbleSort(int[] arr)
     {
         for (int i = 0; i < arr.Length - 1; i++)
         {
@@ -46,36 +46,34 @@
         }
     }
 
-    static int BinarySearch(int[] arr, int target)
-    {
-        int leftIndex = 0;
-        int rightIndex = arr.Length - 1;
+    //static int BinarySearch(int[] arr, int target)
+    //{
+    //    int leftIndex = 0;
+    //    int rightIndex = arr.Length - 1;
 
-        while (leftIndex <= rightIndex)
-        {
-            int middleIndex = (leftIndex + rightIndex) / 2;
+    //    while (leftIndex <= rightIndex)
+    //    {
+    //        int middleIndex = (leftIndex + rightIndex) / 2;
 
-            if (arr[middleIndex] == target)
-                return middleIndex;
-            else
-                if (target > arr[middleIndex])
-                    leftIndex = middleIndex + 1;
-            else
-                rightIndex = middleIndex - 1;
-        }
+    //        if (arr[middleIndex] == target)
+    //            return middleIndex;
+    //        else
+    //            if (target > arr[middleIndex])
+    //                leftIndex = middleIndex + 1;
+    //        else
+    //            rightIndex = middleIndex - 1;
+    //    }
 
-        return -1;
-    }
+    //    return -1;
+    //}
 
     static void Main(string[] args)
     {
+        SortDelegate del = new SortDelegate(SelectionSort);
+
         int[] numbers = [12, 45, 0, -56, 23, 17, 70];
-        SortArray2(numbers);
 
-        for (int i = 0; i < numbers.Length; i++)
-        {
-            Console.WriteLine(numbers[i]);
-        }
-
+        numbers.SortIntArrayAndDisplay(del);
+        numbers.SortIntArrayAndDisplay(BubbleSort);
     }
 }

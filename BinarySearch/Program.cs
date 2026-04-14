@@ -19,10 +19,13 @@ namespace BinarySearch
             int n = 10;
             n.DisplayNumber();
 
-            var res = BinarySearch(numbers, 100);
+            var res2 = ArrayExtensions.BinarySearch(numbers, 100);
 
             int m = 20;
             m.DisplayNumber();
+
+            Console.WriteLine(res);
+            Console.WriteLine(res2);
         }
     }
 }
