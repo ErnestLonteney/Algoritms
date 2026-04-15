@@ -57,7 +57,7 @@ class Program
 
             if (arr[middleIndex] == target)
                 return middleIndex;
-            else
+            
                 if (target > arr[middleIndex])
                     leftIndex = middleIndex + 1;
                 else
