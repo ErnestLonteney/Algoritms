@@ -46,26 +46,26 @@ class Program
         }
     }
 
-    //static int BinarySearch(int[] arr, int target)
-    //{
-    //    int leftIndex = 0;
-    //    int rightIndex = arr.Length - 1;
+    static int BinarySearch(int[] arr, int target)
+    {
+        int leftIndex = 0;
+        int rightIndex = arr.Length - 1;
 
-    //    while (leftIndex <= rightIndex)
-    //    {
-    //        int middleIndex = (leftIndex + rightIndex) / 2;
+        while (leftIndex <= rightIndex)
+        {
+            int middleIndex = (leftIndex + rightIndex) / 2;
 
-    //        if (arr[middleIndex] == target)
-    //            return middleIndex;
-    //        else
-    //            if (target > arr[middleIndex])
-    //                leftIndex = middleIndex + 1;
-    //        else
-    //            rightIndex = middleIndex - 1;
-    //    }
+            if (arr[middleIndex] == target)
+                return middleIndex;
+            else
+                if (target > arr[middleIndex])
+                    leftIndex = middleIndex + 1;
+                else
+                    rightIndex = middleIndex - 1;
+        }
 
-    //    return -1;
-    //}
+        return -1;
+    }
 
     static void Main(string[] args)
     {
